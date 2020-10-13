@@ -1,3 +1,3 @@
 # Dash
 
-A chrome new tab page extension
+A Chrome new tab page extension
