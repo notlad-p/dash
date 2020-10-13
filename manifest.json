@@ -1,0 +1,12 @@
+{
+  "name": "Dash",
+  "version": "1.0",
+  "description": "New Tab Page",
+  "manifest_version": 2,
+  "chrome_url_overrides" : {
+    "newtab": "index.html"
+  }, 
+  "permissions": [
+    "geolocation"
+  ]
+}

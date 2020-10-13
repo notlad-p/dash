@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>New Tab</title>
+  <script src="./dist/header.js" type="module"></script>
+</head>
+<body class="body">
+  <div class="container">
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <form action="https://www.google.com/search" method="get" class="search-form" autocomplete="off">
+        <input type="text" name="q" id="search" placeholder="Search...">
+        <img src="img/icons/edit/search.png" alt="search magnifying glass" class="search-glass">
+      </form>
+    </div>
+
+    <!-- Time & Weather -->
+    <div class="local-info">
+      <div class="date-time">
+        <div class="time">10:32<span class="seconds">:15</span></div>
+        <div class="date">Wednesday, July 22, 2020</div>
+      </div>
+      <div class="weather-container">
+        <div class="city">
+          <img src="/img/icons/edit/pin.png" alt="Weather" class="location-icn">
+        </div>
+        <div class="weather">
+          <div class="temp"> &degF</div>
+          <div class="weather-icn-container">  </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Book Marks -->
+    <div class="bookmark-container">
+      <div class="edit-btns">
+        <img src="img/icons/edit/add.png" alt="add bookmark" class="icn add-icn">
+        <img src="img/icons/edit/image.png" alt="change background" class="icn background-icn">
+      </div>
+      <div class="bookmarks">
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="background-edit">
+    <div class="colors"></div>
+    <div class="background-imgs">
+      <img src="img/backgrounds/birds.jpg" loading="lazy" alt="birds" class="back-img">
+      <img src="img/backgrounds/cells.jpg" loading="lazy" alt="cells" class="back-img">
+      <img src="img/backgrounds/clouds.jpg" loading="lazy" alt="clouds" class="back-img">
+      <img src="img/backgrounds/clouds2.jpg" loading="lazy" alt="clouds2" class="back-img">
+      <img src="img/backgrounds/dots.jpg" alt="dots" loading="lazy" class="back-img">
+      <img src="img/backgrounds/fog.jpg" alt="fog" loading="lazy" class="back-img">
+      <img src="img/backgrounds/globe.jpg" loading="lazy" alt="globe" class="back-img">
+      <img src="img/backgrounds/halo.jpg" alt="halo" loading="lazy" class="back-img">
+      <img src="img/backgrounds/net.jpg" alt="net" loading="lazy" class="back-img">
+      <img src="img/backgrounds/rings.jpg" loading="lazy" alt="rings" class="back-img">
+      <img src="img/backgrounds/waves.jpg" alt="waves" class="back-img">
+    </div>
+    <img src="img/icons/edit/delete.svg" alt="x" class="bg-delete">
+  </div>
+  
+  
+  <div class="bookmark-add">
+    <form action class="edit-form" autocomplete="off">
+      <label for="bm-title" class="label">Name</label>
+      <input type="text" class="bm-input add-bookmark-title" name="bm-title">
+      <label for="bm-link" class="label bm-url">URL</label>
+      <input type="text" class="bm-input add-bookmark-link" name="bm-link">
+      <button type="submit" class="bm-submit">Done</button>
+      <img src="img/icons/edit/delete.svg" alt="x" class="bg-delete" id="book-exit">
+    </form>
+  </div>
+  <script src="vendor/lodash.min.js"></script>
+  <script src="dist/load-bg.js"></script>
+</body>
+</html>

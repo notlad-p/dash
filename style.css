@@ -1,0 +1,323 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; 
+  overflow: hidden;
+  z-index: 0;
+  background-color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  animation: fadeIn ease-in-out 0.95s;
+}
+
+.js-loading *,
+.js-loading *:before,
+.js-loading *:after {
+  animation-play-state: paused !important;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+.container {
+  width: 600px;
+  margin: 0 auto;
+  margin-top: 20vh;
+  padding: 2rem;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.search-bar {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#search {
+  padding: 0 1.5rem;
+  height: 60px;
+  width: 100%;
+  font-size: 1.5rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid #21E6C1;
+  border-radius: 30px;
+}
+
+#search:focus {
+  outline: none;
+}
+
+.search-glass {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  height: 25px;
+  width: 25px;
+}
+
+.search-glass:hover {
+  cursor: pointer;
+}
+
+/* Weather & Time */
+.local-info {
+  width: 100%;
+  padding: 30px 0;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #21E6C1;
+}
+
+.date-time {
+  text-align: left;
+}
+
+.time {
+  font-size: 40px;
+}
+
+.seconds {
+  font-size: 25px;
+}
+
+.date {
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+.weather-container {
+  text-align: right;
+}
+
+.city {
+  font-size: 35px;
+}
+
+.location-icn {
+  height: 30px;
+  cursor: pointer;
+}
+
+.weather {
+  display: inline-flex;
+  margin-top: 5px;
+  font-size: 30px;
+}
+
+.weather-icn {
+  height: 30px;
+  margin-left: 20px;
+}
+
+/* Bookmarks */
+.bookmark-container {
+  margin-top: 25px;
+}
+
+.edit-btns {
+  text-align: right;
+  font-size: 0px;
+}
+
+.icn {
+  height: 25px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.add-icn {
+  margin-right: 10px;
+}
+
+.bookmarks {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0px;
+}
+
+.b-mark {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  text-decoration: none;
+}
+
+.b-mark:hover {
+  box-shadow: 0px 0px 2px 2px #ffffff;
+}
+
+.b-mark-link {
+  height: 100%;
+  width: 100%;
+}
+
+.b-mark-img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.b-mark-title {
+  color: white;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.b-mark-delete {
+  position: absolute;
+  display: none;
+  top: 10px;
+  right: 10px;
+  width: 10px;
+  z-index: 10;
+}
+
+/* .b-mark:hover .b-mark-delete {
+  display: block;
+} */
+
+/* add bookmark */
+.bookmark-add {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.edit-form {
+  position: relative;
+  top: 30%;
+  margin: 0 auto;
+  padding: 0px 25px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: 400px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.label {
+  color: #707070;
+}
+
+.bm-url {
+  margin-top: 20px;
+}
+
+.bm-input {
+  border: none;
+  border-radius: 10px;
+  height: 40px;
+  background-color: #E8E8E8;
+  margin-top: 5px;
+  padding-left: 10px;
+  font-size: 1rem;
+}
+
+.bm-submit {
+  margin-top: 10px;
+  margin-left: 275px;
+  width: 75px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: #071E3D;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.bm-submit:hover {
+  background-color: #0b2e5c;
+}
+
+.background-icn {
+  margin-top: 20px;
+}
+
+/* edit background */
+.background-edit {
+  /* display: none; */
+  position: absolute;
+  top: 10vh;
+  right: -400px;
+  margin: 0 auto;
+  width: 400px;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: 300ms right cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.background-edit.active {
+  right: 0;
+}
+
+.colors {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/* 
+MAKE SLIDE OUT MENU BETTER
+
+USE DRAGGABLE JS FROM SHOPIFY
+*/
+
+.color-input {
+  height: 30px;
+  padding: 0;
+  margin: 10px 10px 10px 100px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+
+
+.background-imgs {
+  margin-top: 10px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.back-img {
+  margin: 5px;
+  padding: 0;
+  width: 170px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.bg-delete {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 20px;
+  cursor: pointer;
+}
