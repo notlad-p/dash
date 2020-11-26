@@ -51,7 +51,7 @@ function currentLocation() {
       long = position.coords.longitude;
       lat = position.coords.latitude;
   
-      const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=imperial&appid=${config.OWM_KEY}`;
+      const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=imperial&appid=${process.env.OWM_KEY}`;
 
       // get api data based on current location
       getApiData(api)
