@@ -97,13 +97,8 @@ function handleDB() {
   });
 
   async function addData() {
-    let apiUrl = bookmarkUrl.value.concat('');
     
-    apiUrl = /(http(s?)):\/\//i.test(apiUrl) ?
-    apiUrl.replace(/(http(s?)):\/\//i, '') :
-    apiUrl;
-    
-    let bmImage = await getApiData(`http://favicongrabber.com/api/grab/${apiUrl}`)
+    let bmImage = await getApiData(`http://favicongrabber.com/api/grab/${bookmarkUrl.value}`)
     .then(data => {
       return data.icons[0].src;
     })
@@ -145,10 +140,7 @@ function handleDB() {
   
       if(cursor) {
         const bookmark = document.createElement('a');
-        bookmark.href = /(http(s?)):\/\//i.test(bookmarkUrl.value) ?
-        `https://${cursor.value.link}` :
-        cursor.value.link;
-        // bookmark.href = `https://${cursor.value.link}`;
+        bookmark.href = `https://${cursor.value.link}`;
         bookmark.setAttribute('class', 'b-mark');
         bookmark.setAttribute('data-id', cursor.value.id);
         bookmark.innerHTML = `<img src="${cursor.value.image}" alt="bookmark image" class="b-mark-img">
