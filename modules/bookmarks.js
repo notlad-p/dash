@@ -98,8 +98,8 @@ function handleDB() {
 
   async function addData() {
     
-    let bmImage = await getApiData(`http://favicongrabber.com/api/grab/${bookmarkUrl.value}`)
-    .then(data => {
+    let bmImage = await getApiData(`https://favicongrabber.com/api/grab/${bookmarkUrl.value}`)
+    .then(data => {``
       return data.icons[0].src;
     })
     .catch(err => console.error(err));
